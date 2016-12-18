@@ -1,0 +1,192 @@
+html{
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  background-color: #f5f4d7;
+  color: #ad5656;
+  width: 100%;
+  height: 100px;
+}
+
+.header-text {
+  font-size: 40px;
+}
+
+.header-logo {
+  height: 55px;
+  position: absolute;
+  left: 27px;
+  top: 15px;
+}
+
+.advent-calendar-overview,
+.calendar-container {
+  margin: 30px 100px;
+}
+
+.text-middle {
+  vertical-align: middle;
+}
+
+.overview-img {
+  width: 400px;
+  margin-right: 30px;
+}
+
+.overview-text {
+  font-size: 20px;
+}
+
+.calendar-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+.calendar-table > thead > tr > th,
+.calendar-table > tbody > tr > td {
+  width: 180px;
+}
+
+.calendar-day,
+.calendar-day-disabled {
+  height: 160px;
+  vertical-align: top;
+  padding: 0;
+}
+
+.calendar-day-disabled {
+  color: #999;
+  background-color: #fbfbfb;
+}
+
+.calendar-date {
+  font-weight: bold;
+  padding-left: 20px;
+  box-sizing: border-box;
+}
+
+.calendar-day .calendar-date {
+  background-color: #efebe9;
+  color: #a1887f;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.register-cosplay-button {
+  margin-top: 70px;
+  width: 100%;
+}
+
+.button {
+  padding: 0 10px;
+}
+
+.calendar-content{
+  text-align: center;
+  padding: 10px
+}
+
+.member-img{
+  width: auto;
+  height: 100px;
+  cursor: pointer;
+
+  transition: opacity .2s ease-in-out;
+}
+.member-img:hover{
+  opacity: 0.7;
+}
+
+/* modalの参考：　http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_img　*/
+
+/* 画像をクリック後の黒いBG */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* 拡大された画像 */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-height: 600px;
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.3s;
+}
+
+/* X(閉じる)ボタン */
+.modal-close{
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  font-size: 50pt;
+  font-weight: bold;
+  color: #e1e1e1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* X（閉じる）ボタンのhover */
+.modal-close:hover{
+  color: #818181;
+}
+
+.loader{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  -webkit-animation: fadein 0.5s;
+}
+
+.loader-content{
+  margin: auto;
+  display: block;
+  width: auto;
+  height: 400px;
+
+  -webkit-animation: fadein 0.5s;
+}
+
+
+/* Zoomアニメーション設定 */
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

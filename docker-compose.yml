@@ -1,0 +1,19 @@
+version: '2'
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 'password'
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    environment:
+      DB_USER: "root"
+      DB_PASSWORD: "password"
+      DB_URL: "mysql2://root:password@db:3306"
+    links:
+      - db

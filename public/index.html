@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Buttons/2.0.0/css/buttons.min.css">
+  <link rel="stylesheet" href="/resources/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/resources/scripts/calendar.js"></script>
+  <title>Document</title>
+</head>
+<body background="/resources/img/pikotaro1.jpg">
+  <header>
+    <div class="header center-box">
+      <img class="header-logo" src="http://next-engine.net/resource/logo/hm_700x158.png" alt="">
+      <span class="header-text">ピコ太郎 Advent Calendar 2016</span>
+    </div>
+  </header>
+  <div class="advent-calendar-overview" style="color: #FF00FF">
+    <span class="overview-text text-middle"></span>
+  </div>
+
+  <div id="myModal" class="modal">
+    <span class="modal-close">×</span>
+    <img class="modal-content" id="modal-img"/>
+    <div id="caption"></div>
+  </div>
+
+  <div id="myLoader" class="loader">
+      <img class="loader-content" src="resources/img/loader_img.jpg" />
+  </div>
+
+  <form id="piko-taro-form" action="aaa.html" method="post">
+    <input type="file" id="file_upload" style="display: none;" />
+    <input type="hidden" id="day_of_month" name="dayOfMonth" value="" />
+  </form>
+
+  <div class="calendar-container center-box">
+    <table class="calendar-table" border="1">
+      <thead>
+        <tr bgcolor="#DCDCDC">
+          <th><span style="color:red">日</span></th>
+          <th>月</th>
+          <th>火</th>
+          <th>水</th>
+          <th>木</th>
+          <th>金</th>
+          <th><span style="color:blue">土</span></th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
